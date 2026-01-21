@@ -1,0 +1,1298 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Final Annotation &#8212; Hannan Lab Single Cell Seq Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=56efc87c" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Final_annotation';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GProfiler &amp; Gene Set Enrichment Analysis" href="GSEA.html" />
+    <link rel="prev" title="RNA Velocity Analysis" href="RNA_velocity.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="Intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Hannan Lab Single Cell Seq Analysis</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Intro.html">
+                    Intro slide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Preprocessing.html">Filter and Process Single Cell Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Validation.html">CellTypist Validation (Healthy)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="RNA_velocity.html">RNA Velocity Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Final Annotation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GSEA.html">GProfiler &amp; Gene Set Enrichment Analysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/Final_annotation.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Final Annotation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="final-annotation">
+<h1>Final Annotation<a class="headerlink" href="#final-annotation" title="Link to this heading">#</a></h1>
+<p>Final annotation was done by naming the clusters given in the initial processing and filtering from the <em>leiden</em> calculation. This gave us the different clusters depending on the variability of the genes on each cluster. After further analysis from CellTypist, Gene Expression, and RNA velocity, this clusters can be manually renamed to obtain the final annotation values which show us the differences inside our sample.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example custom hex colors</span>
+<span class="n">custom_colors</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>   <span class="c1"># reddish</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>   <span class="c1"># teal/greenish</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>   <span class="c1"># blue-green</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>   <span class="c1"># purple</span>
+<span class="p">}</span>
+
+<span class="c1"># Assign colors to AnnData</span>
+<span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">uns</span><span class="p">[</span><span class="s1">&#39;HL_annot_final_colors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">custom_colors</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cat</span><span class="p">)]</span> <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;HL_annot_final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+<span class="p">]</span>
+
+<span class="c1">#sc.pl.umap(at2_h_lp_filt,color=[&#39;HL_annot_final&#39;], legend_fontsize=8)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_1&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;HL_annot_final&#39;</span><span class="p">],</span>
+    <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of final annotation of cell clusters from sample.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_1.png" alt="final_annot_1" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of final annotation of cell clusters from sample.</em><br>
+        <a href="_static/Figures/final_annot_1.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color=[&#39;leiden&#39;], legend_fontsize=8)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_2&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span>
+    <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of leiden clustering&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_2.png" alt="final_annot_2" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of leiden clustering</em><br>
+        <a href="_static/Figures/final_annot_2.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">dendrogram</span><span class="p">(</span><span class="n">at2_h_lp_filt</span><span class="p">,</span> <span class="n">groupby</span> <span class="o">=</span> <span class="s2">&quot;HL_annot_final&quot;</span><span class="p">)</span>
+<span class="n">marker_genes_HL_AT2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;AT2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;SFTPC&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPB&quot;</span><span class="p">,</span><span class="s2">&quot;SLC34A2&quot;</span><span class="p">,</span><span class="s2">&quot;LPCAT1&quot;</span><span class="p">,</span><span class="s2">&quot;LAMP3&quot;</span><span class="p">,</span><span class="s2">&quot;CLDN18&quot;</span><span class="p">,</span><span class="s2">&quot;HOPX&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;TTF1&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Mature AT2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ABCA3&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA1&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA2&quot;</span><span class="p">,</span><span class="s2">&quot;SLPI&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPD&quot;</span><span class="p">,</span><span class="s2">&quot;DNMT1&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Proliferative AT2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;TOP2A&quot;</span><span class="p">,</span><span class="s2">&quot;MKI67&quot;</span><span class="p">,</span><span class="s2">&quot;CCND1&quot;</span><span class="p">,</span><span class="s2">&quot;LMNB1&quot;</span><span class="p">,</span><span class="s2">&quot;BIRC5&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Neuroendocrine&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ASCL1&quot;</span><span class="p">,</span><span class="s2">&quot;SEC11C&quot;</span><span class="p">,</span><span class="s2">&quot;SCG5&quot;</span><span class="p">,</span><span class="s2">&quot;CALCA&quot;</span><span class="p">,</span><span class="s1">&#39;HIF1A&#39;</span><span class="p">,</span><span class="s1">&#39;CHGA&#39;</span><span class="p">,</span><span class="s1">&#39;GRP&#39;</span><span class="p">,</span><span class="s1">&#39;CDH1&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Other&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;EPCAM&quot;</span><span class="p">,</span><span class="s1">&#39;CPM&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1">#sc.pl.dotplot(at2_h_lp_filt, marker_genes_HL_AT2, groupby = [&quot;HL_annot_final&quot;], dendrogram=True)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">dotplot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_3&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">marker_genes_HL_AT2</span><span class="p">,</span>
+    <span class="n">groupby</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">],</span> 
+    <span class="n">dendrogram</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Dotplot of cell specific markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_3.png" alt="final_annot_3" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Dotplot of cell specific markers.</em><br>
+        <a href="_static/Figures/final_annot_3.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marker_genes_HL_AT2_final</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;AT2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;SFTPC&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPB&quot;</span><span class="p">,</span><span class="s2">&quot;SLC34A2&quot;</span><span class="p">,</span><span class="s2">&quot;LPCAT1&quot;</span><span class="p">,</span><span class="s2">&quot;LAMP3&quot;</span><span class="p">,</span><span class="s2">&quot;CLDN18&quot;</span><span class="p">,</span><span class="s2">&quot;HOPX&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;TTF1&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Mature AT2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ABCA3&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA1&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA2&quot;</span><span class="p">,</span><span class="s2">&quot;SLPI&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPD&quot;</span><span class="p">,</span><span class="s2">&quot;DNMT1&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Proliferative AT2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;TOP2A&quot;</span><span class="p">,</span><span class="s2">&quot;MKI67&quot;</span><span class="p">,</span><span class="s2">&quot;CCND1&quot;</span><span class="p">,</span><span class="s2">&quot;LMNB1&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Other&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;EPCAM&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">,</span><span class="s2">&quot;ASCL1&quot;</span><span class="p">,</span><span class="s2">&quot;SEC11C&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1">#sc.pl.dotplot(at2_h_lp_filt, marker_genes_HL_AT2_final, groupby = [&quot;HL_annot_final&quot;], dendrogram=True)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">dotplot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_4&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">marker_genes_HL_AT2_final</span><span class="p">,</span>
+    <span class="n">groupby</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">],</span> 
+    <span class="n">dendrogram</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Dotplot of cell specific markers used for final annotations.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_4.png" alt="final_annot_4" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Dotplot of cell specific markers used for final annotations.</em><br>
+        <a href="_static/Figures/final_annot_4.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marker_genes_HL_AT2_Wnt</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Wnt Genes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;WNT5A&quot;</span><span class="p">,</span><span class="s2">&quot;LRP5&quot;</span><span class="p">,</span><span class="s2">&quot;CTNNBIP1&quot;</span><span class="p">,</span><span class="s2">&quot;TCF4&quot;</span><span class="p">,</span><span class="s2">&quot;AXIN2&quot;</span><span class="p">,</span><span class="s2">&quot;LEF1&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;TGFB Genes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;TGFB2&quot;</span><span class="p">,</span><span class="s2">&quot;TGFB3&quot;</span><span class="p">,</span><span class="s2">&quot;TGFBR1&quot;</span><span class="p">,</span><span class="s2">&quot;TGFBR2&quot;</span><span class="p">,</span><span class="s1">&#39;TGFBR3&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;BMP Genes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;BMP2&quot;</span><span class="p">,</span><span class="s2">&quot;BMP4&quot;</span><span class="p">,</span><span class="s2">&quot;BMP5&quot;</span><span class="p">,</span><span class="s2">&quot;ID2&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1">#sc.pl.dotplot(at2_h_lp_filt, marker_genes_HL_AT2_Wnt, groupby = [&quot;HL_annot_final&quot;], dendrogram=True)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">dotplot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_5&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">marker_genes_HL_AT2_Wnt</span><span class="p">,</span>
+    <span class="n">groupby</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">],</span> 
+    <span class="n">dendrogram</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Dotplot of Wnt, TGFB, and BMP pathways.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_5.png" alt="final_annot_5" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Dotplot of Wnt, TGFB, and BMP pathways.</em><br>
+        <a href="_static/Figures/final_annot_5.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Crosstab normalized by columns (%)</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span>
+    <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;HL_annot_final&#39;</span><span class="p">],</span>
+    <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span>
+    <span class="n">normalize</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span>
+<span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Plot stacked bar chart</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="c1"># Simplify aesthetics</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Calculate overall % for each cell type (mean across samples or total)</span>
+<span class="n">celltype_perc</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># average across samples</span>
+<span class="c1"># celltype_perc = tmp.sum(axis=1) / len(tmp.columns)  # alternative if you prefer total proportions</span>
+
+<span class="c1"># Update legend labels with percentages</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">new_labels</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">celltype_perc</span><span class="p">[</span><span class="n">label</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%)&quot;</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span>
+<span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;CellTypeAnnotation&quot;</span><span class="p">,</span>
+          <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add percentage labels on side of bars</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
+    <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">(),</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_xy</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># skip tiny bars</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">height</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span>
+                    <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+                    <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+                    <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># Labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Percentage (%)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Cell Type Composition per Sample&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">ax</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_6&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Barchart showing percentage of each cluster of cells within the sample.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;matplotlib&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_6.png" alt="final_annot_6" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Barchart showing percentage of each cluster of cells within the sample.</em><br>
+        <a href="_static/Figures/final_annot_6.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SFTPC&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPB&quot;</span><span class="p">,</span><span class="s2">&quot;SLC34A2&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">,</span><span class="s2">&quot;LPCAT1&quot;</span><span class="p">,</span><span class="s2">&quot;LAMP3&quot;</span><span class="p">,</span><span class="s2">&quot;CLDN18&quot;</span><span class="p">,</span><span class="s2">&quot;HOPX&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;TTF1&quot;</span><span class="p">]</span>
+<span class="n">geneList_Mature</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ABCA3&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA1&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA2&quot;</span><span class="p">,</span><span class="s2">&quot;SLPI&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPD&quot;</span><span class="p">]</span>
+<span class="n">geneList_Prolif</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TOP2A&quot;</span><span class="p">,</span><span class="s2">&quot;MKI67&quot;</span><span class="p">,</span><span class="s2">&quot;CCND1&quot;</span><span class="p">,</span><span class="s2">&quot;LMNB1&quot;</span><span class="p">,</span><span class="s2">&quot;BIRC5&quot;</span><span class="p">]</span>
+<span class="n">geneList_Neuroendocrine</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ASCL1&quot;</span><span class="p">,</span><span class="s2">&quot;SEC11C&quot;</span><span class="p">,</span><span class="s2">&quot;SCG5&quot;</span><span class="p">,</span><span class="s2">&quot;CALCA&quot;</span><span class="p">,</span><span class="s1">&#39;CHGA&#39;</span><span class="p">,</span><span class="s1">&#39;GRP&#39;</span><span class="p">,</span><span class="s1">&#39;CDH1&#39;</span><span class="p">]</span>
+<span class="n">geneList_Hypoxic</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HIF1A&#39;</span><span class="p">,</span><span class="s1">&#39;HIF2A&#39;</span><span class="p">,</span><span class="s1">&#39;KLF4&#39;</span><span class="p">,</span><span class="s1">&#39;KLF5&#39;</span><span class="p">]</span>
+<span class="n">geneList_Ionocytes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ASCL3&#39;</span><span class="p">,</span><span class="s1">&#39;SEC11C&#39;</span><span class="p">]</span> 
+<span class="n">geneList_Other</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;EPCAM&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&quot;SFTPC&quot;,&quot;SFTPB&quot;,&quot;SLC34A2&quot;,&quot;CPM&quot;,&quot;LPCAT1&quot;,&quot;LAMP3&quot;,&quot;CLDN18&quot;,&quot;HOPX&quot;,&quot;NAPSA&quot;,&quot;TTF1&quot;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_7&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SFTPC&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPB&quot;</span><span class="p">,</span><span class="s2">&quot;SLC34A2&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">,</span><span class="s2">&quot;LPCAT1&quot;</span><span class="p">,</span><span class="s2">&quot;LAMP3&quot;</span><span class="p">,</span><span class="s2">&quot;CLDN18&quot;</span><span class="p">,</span><span class="s2">&quot;HOPX&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;TTF1&quot;</span><span class="p">],</span>
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of AT2 markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_7.png" alt="final_annot_7" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of AT2 markers.</em><br>
+        <a href="_static/Figures/final_annot_7.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Check which of your requested genes are actually present</span>
+<span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SFTPC&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPB&quot;</span><span class="p">,</span><span class="s2">&quot;SLC34A2&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">,</span><span class="s2">&quot;LPCAT1&quot;</span><span class="p">,</span><span class="s2">&quot;LAMP3&quot;</span><span class="p">,</span><span class="s2">&quot;CLDN18&quot;</span><span class="p">,</span><span class="s2">&quot;HOPX&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;TTF1&quot;</span><span class="p">]</span>
+
+<span class="n">available_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+<span class="n">missing_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Genes found:&quot;</span><span class="p">,</span> <span class="n">available_genes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Genes missing:&quot;</span><span class="p">,</span> <span class="n">missing_genes</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Only subset by available genes</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="p">[:,</span> <span class="n">available_genes</span><span class="p">]</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Add condition info</span>
+<span class="n">expr</span><span class="p">[</span><span class="s2">&quot;Condition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Step 4: Reshape into long format</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Define palette</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 6: Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
+                        <span class="n">data</span><span class="o">=</span><span class="n">df_long</span><span class="p">,</span>
+                        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span>
+                        <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span>
+                        <span class="n">cut</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                        <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+                        <span class="n">inner</span><span class="o">=</span><span class="kc">None</span>
+                    <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expression Level&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">plot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_8&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Violin plot of AT2 markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;seaborn&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Genes found: [&#39;SFTPC&#39;, &#39;SLC34A2&#39;, &#39;LAMP3&#39;, &#39;CLDN18&#39;, &#39;HOPX&#39;]
+❌ Genes missing: [&#39;SFTPB&#39;, &#39;CPM&#39;, &#39;LPCAT1&#39;, &#39;NAPSA&#39;, &#39;TTF1&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_8.png" alt="final_annot_8" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Violin plot of AT2 markers.</em><br>
+        <a href="_static/Figures/final_annot_8.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&quot;ABCA3&quot;,&quot;SFTPA1&quot;,&quot;SFTPA2&quot;,&quot;SLPI&quot;,&quot;NAPSA&quot;,&quot;SFTPD&quot;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_9&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ABCA3&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA1&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA2&quot;</span><span class="p">,</span><span class="s2">&quot;SLPI&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPD&quot;</span><span class="p">],</span>
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of Mature AT2 markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_9.png" alt="final_annot_9" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of Mature AT2 markers.</em><br>
+        <a href="_static/Figures/final_annot_9.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Check which of your requested genes are actually present</span>
+<span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ABCA3&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA1&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPA2&quot;</span><span class="p">,</span><span class="s2">&quot;SLPI&quot;</span><span class="p">,</span><span class="s2">&quot;NAPSA&quot;</span><span class="p">,</span><span class="s2">&quot;SFTPD&quot;</span><span class="p">]</span>
+
+<span class="n">available_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+<span class="n">missing_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Genes found:&quot;</span><span class="p">,</span> <span class="n">available_genes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Genes missing:&quot;</span><span class="p">,</span> <span class="n">missing_genes</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Only subset by available genes</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="p">[:,</span> <span class="n">available_genes</span><span class="p">]</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Add condition info</span>
+<span class="n">expr</span><span class="p">[</span><span class="s2">&quot;Condition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Step 4: Reshape into long format</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Define palette</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 6: Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
+                        <span class="n">data</span><span class="o">=</span><span class="n">df_long</span><span class="p">,</span>
+                        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span>
+                        <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span>
+                        <span class="n">cut</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                        <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+                        <span class="n">inner</span><span class="o">=</span><span class="kc">None</span>
+                    <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expression Level&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">plot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_10&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Violin plot of Mature AT2 markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;seaborn&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Genes found: [&#39;ABCA3&#39;, &#39;SFTPA1&#39;, &#39;SFTPA2&#39;, &#39;SLPI&#39;]
+❌ Genes missing: [&#39;NAPSA&#39;, &#39;SFTPD&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_10.png" alt="final_annot_10" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Violin plot of Mature AT2 markers.</em><br>
+        <a href="_static/Figures/final_annot_10.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&quot;TOP2A&quot;,&quot;MKI67&quot;,&quot;CCND1&quot;,&quot;LMNB1&quot;,&quot;BIRC5&quot;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_11&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TOP2A&quot;</span><span class="p">,</span><span class="s2">&quot;MKI67&quot;</span><span class="p">,</span><span class="s2">&quot;CCND1&quot;</span><span class="p">,</span><span class="s2">&quot;LMNB1&quot;</span><span class="p">,</span><span class="s2">&quot;BIRC5&quot;</span><span class="p">],</span>
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of Proliferation markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_11.png" alt="final_annot_11" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of Proliferation markers.</em><br>
+        <a href="_static/Figures/final_annot_11.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Check which of your requested genes are actually present</span>
+<span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TOP2A&quot;</span><span class="p">,</span><span class="s2">&quot;MKI67&quot;</span><span class="p">,</span><span class="s2">&quot;CCND1&quot;</span><span class="p">,</span><span class="s2">&quot;LMNB1&quot;</span><span class="p">,</span><span class="s2">&quot;BIRC5&quot;</span><span class="p">]</span>
+
+<span class="n">available_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+<span class="n">missing_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Genes found:&quot;</span><span class="p">,</span> <span class="n">available_genes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Genes missing:&quot;</span><span class="p">,</span> <span class="n">missing_genes</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Only subset by available genes</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="p">[:,</span> <span class="n">available_genes</span><span class="p">]</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Add condition info</span>
+<span class="n">expr</span><span class="p">[</span><span class="s2">&quot;Condition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Step 4: Reshape into long format</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Define palette</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 6: Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_long</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span>
+    <span class="n">cut</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+    <span class="n">inner</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expression Level&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">plot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_12&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Violin plot of Proliferation markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;seaborn&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Genes found: [&#39;TOP2A&#39;, &#39;MKI67&#39;]
+❌ Genes missing: [&#39;CCND1&#39;, &#39;LMNB1&#39;, &#39;BIRC5&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_12.png" alt="final_annot_12" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Violin plot of Proliferation markers.</em><br>
+        <a href="_static/Figures/final_annot_12.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&quot;ASCL1&quot;,&quot;SEC11C&quot;,&quot;SCG5&quot;,&quot;CALCA&quot;,&#39;CHGA&#39;,&#39;GRP&#39;,&#39;CDH1&#39;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&quot;TOP2A&quot;,&quot;MKI67&quot;,&quot;CCND1&quot;,&quot;LMNB1&quot;,&quot;BIRC5&quot;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_13&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ASCL1&quot;</span><span class="p">,</span><span class="s2">&quot;SEC11C&quot;</span><span class="p">,</span><span class="s2">&quot;SCG5&quot;</span><span class="p">,</span><span class="s2">&quot;CALCA&quot;</span><span class="p">,</span><span class="s1">&#39;CHGA&#39;</span><span class="p">,</span><span class="s1">&#39;GRP&#39;</span><span class="p">,</span><span class="s1">&#39;CDH1&#39;</span><span class="p">],</span>
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of Neuroendocrine markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_13.png" alt="final_annot_13" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of Neuroendocrine markers.</em><br>
+        <a href="_static/Figures/final_annot_13.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Check which of your requested genes are actually present</span>
+<span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ASCL1&quot;</span><span class="p">,</span><span class="s2">&quot;SEC11C&quot;</span><span class="p">,</span><span class="s2">&quot;SCG5&quot;</span><span class="p">,</span><span class="s2">&quot;CALCA&quot;</span><span class="p">,</span><span class="s1">&#39;CHGA&#39;</span><span class="p">,</span><span class="s1">&#39;GRP&#39;</span><span class="p">,</span><span class="s1">&#39;CDH1&#39;</span><span class="p">]</span>
+
+<span class="n">available_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+<span class="n">missing_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Genes found:&quot;</span><span class="p">,</span> <span class="n">available_genes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Genes missing:&quot;</span><span class="p">,</span> <span class="n">missing_genes</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Only subset by available genes</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="p">[:,</span> <span class="n">available_genes</span><span class="p">]</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Add condition info</span>
+<span class="n">expr</span><span class="p">[</span><span class="s2">&quot;Condition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Step 4: Reshape into long format</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Define palette</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 6: Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_long</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span>
+    <span class="n">cut</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+    <span class="n">inner</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expression Level&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">plot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_14&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Violin plot of Neuroendocrine markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;seaborn&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Genes found: [&#39;ASCL1&#39;, &#39;SEC11C&#39;, &#39;CALCA&#39;, &#39;CHGA&#39;]
+❌ Genes missing: [&#39;SCG5&#39;, &#39;GRP&#39;, &#39;CDH1&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_14.png" alt="final_annot_14" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Violin plot of Neuroendocrine markers.</em><br>
+        <a href="_static/Figures/final_annot_14.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&#39;HIF1A&#39;,&#39;KLF4&#39;,&#39;KLF5&#39;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_15&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HIF1A&#39;</span><span class="p">,</span><span class="s1">&#39;KLF4&#39;</span><span class="p">,</span><span class="s1">&#39;KLF5&#39;</span><span class="p">],</span> 
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of Hypoxic markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_15.png" alt="final_annot_15" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of Hypoxic markers.</em><br>
+        <a href="_static/Figures/final_annot_15.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Check which of your requested genes are actually present</span>
+<span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HIF1A&#39;</span><span class="p">,</span><span class="s1">&#39;KLF4&#39;</span><span class="p">,</span><span class="s1">&#39;KLF5&#39;</span><span class="p">]</span>
+
+<span class="n">available_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+<span class="n">missing_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Genes found:&quot;</span><span class="p">,</span> <span class="n">available_genes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Genes missing:&quot;</span><span class="p">,</span> <span class="n">missing_genes</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Only subset by available genes</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="p">[:,</span> <span class="n">available_genes</span><span class="p">]</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Add condition info</span>
+<span class="n">expr</span><span class="p">[</span><span class="s2">&quot;Condition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Step 4: Reshape into long format</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Define palette</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 6: Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_long</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span>
+    <span class="n">cut</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+    <span class="n">inner</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expression Level&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">plot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_16&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Violin plot of Hypoxic markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;seaborn&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Genes found: []
+❌ Genes missing: [&#39;HIF1A&#39;, &#39;KLF4&#39;, &#39;KLF5&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_16.png" alt="final_annot_16" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Violin plot of Hypoxic markers.</em><br>
+        <a href="_static/Figures/final_annot_16.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&#39;ASCL3&#39;,&#39;SEC11C&#39;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_17&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;ASCL3&#39;</span><span class="p">,</span><span class="s1">&#39;SEC11C&#39;</span><span class="p">],</span> 
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of Ionocyte markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_17.png" alt="final_annot_17" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of Ionocyte markers.</em><br>
+        <a href="_static/Figures/final_annot_17.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sc.pl.umap(at2_h_lp_filt,color= [&quot;EPCAM&quot;,&quot;CPM&quot;], </span>
+<span class="c1">#           legend_fontsize=8, cmap = &#39;Reds&#39;)</span>
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_18&quot;</span><span class="p">,</span>
+    <span class="n">at2_h_lp_filt</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span>  <span class="p">[</span><span class="s2">&quot;EPCAM&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">],</span>  
+    <span class="n">legend_fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;UMAP of Other markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scanpy&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_18.png" alt="final_annot_18" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>UMAP of Other markers.</em><br>
+        <a href="_static/Figures/final_annot_18.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Check which of your requested genes are actually present</span>
+<span class="n">geneList_AT2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;EPCAM&quot;</span><span class="p">,</span><span class="s2">&quot;CPM&quot;</span><span class="p">]</span>
+
+<span class="n">available_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+<span class="n">missing_genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">geneList_AT2</span> <span class="k">if</span> <span class="n">g</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">var_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Genes found:&quot;</span><span class="p">,</span> <span class="n">available_genes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Genes missing:&quot;</span><span class="p">,</span> <span class="n">missing_genes</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Only subset by available genes</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="p">[:,</span> <span class="n">available_genes</span><span class="p">]</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Add condition info</span>
+<span class="n">expr</span><span class="p">[</span><span class="s2">&quot;Condition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">at2_h_lp_filt</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;HL_annot_final&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Step 4: Reshape into long format</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 5: Define palette</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Early AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#0AB59B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Proliferating AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#FF8C00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Late AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#EE204D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&#39;ASCL1+&#39; AT2 Like Cells&quot;</span><span class="p">:</span> <span class="s2">&quot;#9500FF&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Step 6: Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_long</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Expression&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Condition&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span>
+    <span class="n">cut</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+    <span class="n">inner</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expression Level&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">sc_plot_and_embed</span><span class="p">(</span>
+    <span class="n">plot</span><span class="p">,</span>
+    <span class="s2">&quot;final_annot_19&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s1">&#39;Violin plot of Other markers.&#39;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;seaborn&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Genes found: []
+❌ Genes missing: [&#39;EPCAM&#39;, &#39;CPM&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+    <div class="figure-wrapper" style="text-align:center; margin:20px 0;">
+      <img src="_static/Figures/final_annot_19.png" alt="final_annot_19" style="max-width:100%; height:auto;" />
+      <p style="font-size:0.9em; color:#555;">
+        <em>Violin plot of Other markers.</em><br>
+        <a href="_static/Figures/final_annot_19.tiff">Download TIFF (600 dpi)</a>
+      </p>
+    </div>
+    </div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "scrnaseqhannan"
+        },
+        kernelOptions: {
+            name: "scrnaseqhannan",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'scrnaseqhannan'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="RNA_velocity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">RNA Velocity Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="GSEA.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GProfiler &amp; Gene Set Enrichment Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Carlos B. Sainz Zuñiga
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

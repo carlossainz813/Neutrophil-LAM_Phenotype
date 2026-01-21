@@ -1,0 +1,24 @@
+# _config.yml
+title: "Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab"
+author: "Carlos B. Sainz Zuñiga"
+logo: "Hannan Lab"
+html_theme: "sphinx_book_theme"
+html_theme_options:
+  path_to_docs: "."
+  use_repository_button: false
+  home_page_in_toc: true
+  collapse_navigation: true
+  navigation_depth: 4
+
+html_css_files:
+ - custom.css
+
+html_static_path:
+  - _static
+  
+execute:
+  execute_notebooks: auto 
+
+html:
+  use_hide_input_buttons: true 
+
