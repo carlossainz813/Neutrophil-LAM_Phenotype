@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab &#8212; Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab</title>
+    <title>Initial Neutrophil Query &#8212; Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Initial_Neutrophil_Query';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab" href="Reference_Neutrophil_Query.html" />
-    <link rel="prev" title="Intro slide" href="Intro.html" />
+    <link rel="next" title="Reference Neutrophil Query" href="Reference_Neutrophil_Query.html" />
+    <link rel="prev" title="Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab" href="Intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,14 +169,14 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="Intro.html">
-                    Intro slide
+                    <b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b>
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b></b></b></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reference_Neutrophil_Query.html"><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b></b></b></a></li>
-<li class="toctree-l1"><a class="reference internal" href="MPO_Neutrophils.html"><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b></b></b></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><b> Initial Neutrophil Query <b></b></b></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference_Neutrophil_Query.html"><b> Reference Neutrophil Query <b></b></b></a></li>
+<li class="toctree-l1"><a class="reference internal" href="MPO_Neutrophils.html"><b> MPO+ Neutrophil Cell Analysis <b></b></b></a></li>
 </ul>
 
     </div>
@@ -315,7 +315,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b></h1>
+    <h1><b> Initial Neutrophil Query <b></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -331,25 +331,75 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#unifold-manifold-and-approximation-umap-also-known-as-tsne-plots">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#umap-showing-expression-of-some-neutrophil-markers-within-the-population">UMAP showing expression of some Neutrophil markers within the population.</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#dotplot-showing-expression-of-general-neutrophil-n1-and-n2-specific-neutrophil-markers">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cells-were-subset-using-mpo-as-a-positive-marker">Cells were subset using MPO as a positive marker.</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam2">LAM2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam3">LAM3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam2">LAM2</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam3">LAM3</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam4">LAM4</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#removed-from-analysis-as-it-didn-t-have-any-mpo-cells">Removed from analysis as it didn’t have any MPO+ Cells.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Cells were subset using MPO as a positive marker.</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse135851">Joining Datasets for GSE135851</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse135851">Joining Datasets for GSE135851</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gse190260">GSE190260</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">LAM1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">LAM2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">LAM3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">LAM1</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Cells were subset using MPO as a positive marker.</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse190260">Joining DataSets for GSE190260</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-gse190260-lam-with-gse135851-lam">Joining GSE190260_LAM with GSE135851_LAM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">LAM2</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">LAM3</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse190260">Joining DataSets for GSE190260</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-gse190260-lam-with-gse135851-lam">Joining GSE190260_LAM with GSE135851_LAM</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -363,9 +413,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="neutrophil-lymphangioleiomyomatosis-lam-analysis-for-sasha-gaye-richards-phd-from-the-johnson-lab">
-<h1><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b><a class="headerlink" href="#neutrophil-lymphangioleiomyomatosis-lam-analysis-for-sasha-gaye-richards-phd-from-the-johnson-lab" title="Link to this heading">#</a></h1>
-<p>This is the notebook for the analysis of different Neutrophil phenotypes using online available datasets of single cell RNA Seq data.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="initial-neutrophil-query">
+<h1><b> Initial Neutrophil Query <b><a class="headerlink" href="#initial-neutrophil-query" title="Link to this heading">#</a></h1>
+<p>This page contains the analysis of different Neutrophil phenotypes using online available datasets of single cell RNA Seq data.</p>
 <ul class="simple">
 <li><p>Single-Cell Transcriptomic Analysis Identifies a Unique Pulmonary Lymphangioleiomyomatosis Cell</p>
 <ul>
@@ -393,34 +443,7 @@ document.write(`
 <ul>
 <li><p>GSE190260_LAM1</p></li>
 <li><p>GSE190260_LAM2</p></li>
-<li><p>GSE190260_LAM3
-For a reference dataset the following publication was used:</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Neutrophil single-cell analysis identifies a type II interferon-related subset for predicting relapse of autoimmune small vessel vasculitis.</p>
-<ul>
-<li><p>DOI: <a class="reference external" href="https://doi.org/10.1038/s41467-025-58550-7">https://doi.org/10.1038/s41467-025-58550-7</a></p></li>
-<li><p>Online: <a class="reference external" href="https://ddbj.nig.ac.jp/public/ddbj_database/gea/experiment/E-GEAD-000/E-GEAD-867/">https://ddbj.nig.ac.jp/public/ddbj_database/gea/experiment/E-GEAD-000/E-GEAD-867/</a></p>
-<ul>
-<li><p>Samples:</p>
-<ul>
-<li><p>HD-1</p></li>
-<li><p>HD-2</p></li>
-<li><p>HD-3</p></li>
-<li><p>HD-4</p></li>
-<li><p>HD-5</p></li>
-<li><p>HD-6</p></li>
-<li><p>HD-7</p></li>
-<li><p>MPA-1</p></li>
-<li><p>MPA-2</p></li>
-<li><p>MPA-3</p></li>
-<li><p>MPA-4</p></li>
-<li><p>MPA-5</p></li>
-<li><p>MPA-6</p></li>
+<li><p>GSE190260_LAM3</p></li>
 </ul>
 </li>
 </ul>
@@ -432,7 +455,7 @@ For a reference dataset the following publication was used:</p></li>
 <h2><b>Analysis<b><a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
 <p>The analysis was done by first isolating the Neutrophil using <em>MPO</em> as a marker.</p>
 <p>Datasets were then merged by using the <em>harmonizepy</em> package.</p>
-<p>After this was done different subsets of Neutrophils were marked as <strong>N1</strong> and <strong>N2</strong>, depending on a set of gene expression markers.</p>
+<p>After this was done different subsets of Neutrophils were marked as <strong>N1</strong> and <strong>N2</strong>, depending on a set of gene expression markers. (To be done once Sasha goes over the analysis)</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>N1 Neutrophils</strong></p></th>
@@ -476,6 +499,31 @@ For a reference dataset the following publication was used:</p></li>
 </tbody>
 </table>
 </div>
+<p><strong>Author:</strong> Carlos B. Sainz Zuñiga<br />
+<strong>Contact:</strong> <a class="reference external" href="mailto:carlos&#46;sainz&#37;&#52;&#48;nottingham&#46;ac&#46;uk">carlos<span>&#46;</span>sainz<span>&#64;</span>nottingham<span>&#46;</span>ac<span>&#46;</span>uk</a>
+<strong>Affiliations:</strong> PhD Candidate at the Hannan Lab under Nicholas RF. Hannan at the University of Nottingham.</p>
+<hr class="docutils" />
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#| hide-input</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Notebook run on:&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Notebook run on: 2026-01-26 03:46:21
+</pre></div>
+</div>
+</div>
+</div>
 <section id="gse135851">
 <h3>GSE135851<a class="headerlink" href="#gse135851" title="Link to this heading">#</a></h3>
 <section id="lam1">
@@ -495,19 +543,19 @@ For a reference dataset the following publication was used:</p></li>
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#| hide-input</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/543f3db8992f808a3f8e1a380dc7a2bf4135308eb11de25329f144bd8639ec4a.png"><img alt="../_images/543f3db8992f808a3f8e1a380dc7a2bf4135308eb11de25329f144bd8639ec4a.png" src="../_images/543f3db8992f808a3f8e1a380dc7a2bf4135308eb11de25329f144bd8639ec4a.png" style="width: 546px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/aaee38bb05c7685aed50c751fdc2f2972781c6297acff8cdc980d9a85a4fb832.png"><img alt="../_images/aaee38bb05c7685aed50c751fdc2f2972781c6297acff8cdc980d9a85a4fb832.png" src="../_images/aaee38bb05c7685aed50c751fdc2f2972781c6297acff8cdc980d9a85a4fb832.png" style="width: 555px; height: 438px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/116a7a4967bbd2eee4d7ae4aafeed570e436953c386caf576a3f907795e029c2.png"><img alt="../_images/116a7a4967bbd2eee4d7ae4aafeed570e436953c386caf576a3f907795e029c2.png" src="../_images/116a7a4967bbd2eee4d7ae4aafeed570e436953c386caf576a3f907795e029c2.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/4451fe397f28a5c7705504c7df7546ac948ba2ba8cd2e437b8585b98050d4dc2.png"><img alt="../_images/4451fe397f28a5c7705504c7df7546ac948ba2ba8cd2e437b8585b98050d4dc2.png" src="../_images/4451fe397f28a5c7705504c7df7546ac948ba2ba8cd2e437b8585b98050d4dc2.png" style="width: 619px; height: 438px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/8dd6af0634660453865450d0f1c19075b09c60224659d0402981e5579d9802a3.png"><img alt="../_images/8dd6af0634660453865450d0f1c19075b09c60224659d0402981e5579d9802a3.png" src="../_images/8dd6af0634660453865450d0f1c19075b09c60224659d0402981e5579d9802a3.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/39023a2f5db109ad5dbe653b0e1424f6a51e5848c02d732ed5bcfc6b7aacebc2.png"><img alt="../_images/39023a2f5db109ad5dbe653b0e1424f6a51e5848c02d732ed5bcfc6b7aacebc2.png" src="../_images/39023a2f5db109ad5dbe653b0e1424f6a51e5848c02d732ed5bcfc6b7aacebc2.png" style="width: 664px; height: 438px;" />
 </a>
 </div>
 </div>
@@ -523,13 +571,13 @@ For a reference dataset the following publication was used:</p></li>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#| hide-input</span>
 <span class="c1">## Main Neutrophil Markers</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MPO&#39;</span><span class="p">,</span><span class="s1">&#39;ELANE&#39;</span><span class="p">,</span><span class="s1">&#39;ITGAM&#39;</span><span class="p">,</span><span class="s1">&#39;SELL&#39;</span><span class="p">,</span><span class="s1">&#39;ICAM1&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL10&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL1&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL2&#39;</span><span class="p">,</span><span class="s1">&#39;CEACAM1&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MPO&#39;</span><span class="p">,</span><span class="s1">&#39;ELANE&#39;</span><span class="p">,</span><span class="s1">&#39;SLPI&#39;</span><span class="p">,</span><span class="s1">&#39;ITGAM&#39;</span><span class="p">,</span><span class="s1">&#39;SELL&#39;</span><span class="p">,</span><span class="s1">&#39;ICAM1&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL10&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL1&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL2&#39;</span><span class="p">,</span><span class="s1">&#39;CEACAM1&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;Reds&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/e42d5e2fea6b1fcd82724e3d5fbf59f2d0d0388a7abebd7a69ab0f51c1da61d3.png"><img alt="../_images/e42d5e2fea6b1fcd82724e3d5fbf59f2d0d0388a7abebd7a69ab0f51c1da61d3.png" src="../_images/e42d5e2fea6b1fcd82724e3d5fbf59f2d0d0388a7abebd7a69ab0f51c1da61d3.png" style="width: 2222px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/b63263965d44d1cf5a3cb58d553554000bf57fb5ebcdb5c8b02ad3b7d11240c7.png"><img alt="../_images/b63263965d44d1cf5a3cb58d553554000bf57fb5ebcdb5c8b02ad3b7d11240c7.png" src="../_images/b63263965d44d1cf5a3cb58d553554000bf57fb5ebcdb5c8b02ad3b7d11240c7.png" style="width: 2222px; height: 1313px;" />
 </a>
 </div>
 </div>
@@ -549,14 +597,13 @@ For a reference dataset the following publication was used:</p></li>
     <span class="s2">&quot;Neutrophil N1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ITGAM&quot;</span><span class="p">,</span><span class="s2">&quot;FCGR3B&quot;</span><span class="p">,</span><span class="s2">&quot;CEACAM1&quot;</span><span class="p">,</span><span class="s2">&quot;GPI&quot;</span><span class="p">,</span><span class="s2">&quot;ICAM1&quot;</span><span class="p">,</span><span class="s2">&quot;CXCL1&quot;</span><span class="p">,</span><span class="s1">&#39;CXCL2&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL3&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL10&#39;</span><span class="p">,</span><span class="s1">&#39;TNF&#39;</span><span class="p">,</span><span class="s1">&#39;MYD88&#39;</span><span class="p">],</span>
     <span class="s2">&quot;Neutrophil N2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ITGAM&#39;</span><span class="p">,</span><span class="s1">&#39;FCGR3B&#39;</span><span class="p">,</span><span class="s1">&#39;CEACAM1&#39;</span><span class="p">,</span><span class="s1">&#39;GPI&#39;</span><span class="p">,</span><span class="s1">&#39;SELL&#39;</span><span class="p">,</span><span class="s1">&#39;MRC1&#39;</span><span class="p">,</span><span class="s1">&#39;PI3&#39;</span><span class="p">,</span><span class="s1">&#39;SLPI&#39;</span><span class="p">]</span>
 <span class="p">}</span>
-
 <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">dotplot</span><span class="p">(</span>
     <span class="n">GSE135851_LAM1</span><span class="p">,</span>
     <span class="n">marker_Neutrophil</span><span class="p">,</span>
     <span class="n">groupby</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;leiden&quot;</span><span class="p">],</span> 
     <span class="n">dendrogram</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">use_raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="c1">#title = &#39;Dotplot of Neutrophil specific markers in leiden clusters - Lam 1 Samples [GSE135851]&#39;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Dotplot of Neutrophil specific markers - LAM 2 Samples [GSE135851]&#39;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -566,6 +613,12 @@ For a reference dataset the following publication was used:</p></li>
 <a class="reference internal image-reference" href="../_images/930305be473b90d013692eba539322595db273b12ed1268c9dadccebdf643253.png"><img alt="../_images/930305be473b90d013692eba539322595db273b12ed1268c9dadccebdf643253.png" src="../_images/930305be473b90d013692eba539322595db273b12ed1268c9dadccebdf643253.png" style="width: 1060px; height: 542px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="cells-were-subset-using-mpo-as-a-positive-marker">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#cells-were-subset-using-mpo-as-a-positive-marker" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -647,21 +700,20 @@ Name: count, dtype: int64
     <span class="s2">&quot;Neutrophil N1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ITGAM&quot;</span><span class="p">,</span><span class="s2">&quot;FCGR3B&quot;</span><span class="p">,</span><span class="s2">&quot;CEACAM1&quot;</span><span class="p">,</span><span class="s2">&quot;GPI&quot;</span><span class="p">,</span><span class="s2">&quot;ICAM1&quot;</span><span class="p">,</span><span class="s2">&quot;CXCL1&quot;</span><span class="p">,</span><span class="s1">&#39;CXCL2&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL3&#39;</span><span class="p">,</span><span class="s1">&#39;CXCL10&#39;</span><span class="p">,</span><span class="s1">&#39;TNF&#39;</span><span class="p">,</span><span class="s1">&#39;MYD88&#39;</span><span class="p">],</span>
     <span class="s2">&quot;Neutrophil N2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ITGAM&#39;</span><span class="p">,</span><span class="s1">&#39;FCGR3B&#39;</span><span class="p">,</span><span class="s1">&#39;CEACAM1&#39;</span><span class="p">,</span><span class="s1">&#39;GPI&#39;</span><span class="p">,</span><span class="s1">&#39;SELL&#39;</span><span class="p">,</span><span class="s1">&#39;MRC1&#39;</span><span class="p">,</span><span class="s1">&#39;PI3&#39;</span><span class="p">,</span><span class="s1">&#39;SLPI&#39;</span><span class="p">]</span>
 <span class="p">}</span>
-
 <span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">dotplot</span><span class="p">(</span>
     <span class="n">GSE135851_LAM1_Neutrophil</span><span class="p">,</span>
     <span class="n">marker_Neutrophil</span><span class="p">,</span>
     <span class="n">groupby</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Cell_Type&quot;</span><span class="p">],</span> 
     <span class="n">dendrogram</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">use_raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Dotplot of Neutrophil specific markers - Lam 1 Samples [GSE135851]&#39;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/4fce7aa50735c9e4e5d5373af4fb5a85ec4025d3c9d9d1b6ecf3872c4a3bc67d.png"><img alt="../_images/4fce7aa50735c9e4e5d5373af4fb5a85ec4025d3c9d9d1b6ecf3872c4a3bc67d.png" src="../_images/4fce7aa50735c9e4e5d5373af4fb5a85ec4025d3c9d9d1b6ecf3872c4a3bc67d.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/b1e9b8344810d7eefff39588395de8672f6878400ceabddbb3f3a83e4ad7b5e3.png"><img alt="../_images/b1e9b8344810d7eefff39588395de8672f6878400ceabddbb3f3a83e4ad7b5e3.png" src="../_images/b1e9b8344810d7eefff39588395de8672f6878400ceabddbb3f3a83e4ad7b5e3.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
@@ -669,6 +721,13 @@ Name: count, dtype: int64
 </section>
 <section id="lam2">
 <h4>LAM2<a class="headerlink" href="#lam2" title="Link to this heading">#</a></h4>
+<section id="id1">
+<h5>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -677,22 +736,25 @@ Name: count, dtype: int64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#| hide-input</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/30d428c81825ec9a8250a51c7a77c217c8b2834c5ff0706267041f576326bba0.png"><img alt="../_images/30d428c81825ec9a8250a51c7a77c217c8b2834c5ff0706267041f576326bba0.png" src="../_images/30d428c81825ec9a8250a51c7a77c217c8b2834c5ff0706267041f576326bba0.png" style="width: 539px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/3c4e7f6f9d14843f31e13728955e965b4212a3c320cbae16b514c209d6776150.png"><img alt="../_images/3c4e7f6f9d14843f31e13728955e965b4212a3c320cbae16b514c209d6776150.png" src="../_images/3c4e7f6f9d14843f31e13728955e965b4212a3c320cbae16b514c209d6776150.png" style="width: 317px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/83d6a675db58a24f3e8d1ed5860d4572a9784e6a8652bb7a4d5e050a37a54e0e.png"><img alt="../_images/83d6a675db58a24f3e8d1ed5860d4572a9784e6a8652bb7a4d5e050a37a54e0e.png" src="../_images/83d6a675db58a24f3e8d1ed5860d4572a9784e6a8652bb7a4d5e050a37a54e0e.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/e7ab6ad9c36bcdf7e30c00150b6724728368951510dcf1ce55f72f88d806730e.png"><img alt="../_images/e7ab6ad9c36bcdf7e30c00150b6724728368951510dcf1ce55f72f88d806730e.png" src="../_images/e7ab6ad9c36bcdf7e30c00150b6724728368951510dcf1ce55f72f88d806730e.png" style="width: 375px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/5cd6aed9abe34b7dc5ac3bc1fbafd0ad169215a3d7c2d0b5634e02e5a83942ab.png"><img alt="../_images/5cd6aed9abe34b7dc5ac3bc1fbafd0ad169215a3d7c2d0b5634e02e5a83942ab.png" src="../_images/5cd6aed9abe34b7dc5ac3bc1fbafd0ad169215a3d7c2d0b5634e02e5a83942ab.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/1d32c72f5527b8311397a365634d5669a7bb7567048164aa1e6061b1ca1dac60.png"><img alt="../_images/1d32c72f5527b8311397a365634d5669a7bb7567048164aa1e6061b1ca1dac60.png" src="../_images/1d32c72f5527b8311397a365634d5669a7bb7567048164aa1e6061b1ca1dac60.png" style="width: 411px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id2">
+<h5>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -708,10 +770,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/e1729feee1ab8359d2643dff3c39d04bdb385e46d853e5eb63d096df74fafe75.png"><img alt="../_images/e1729feee1ab8359d2643dff3c39d04bdb385e46d853e5eb63d096df74fafe75.png" src="../_images/e1729feee1ab8359d2643dff3c39d04bdb385e46d853e5eb63d096df74fafe75.png" style="width: 2222px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/de0e9acfe8c9465be05bbe62280a2480ff080182ad0b758cd17f10893471e973.png"><img alt="../_images/de0e9acfe8c9465be05bbe62280a2480ff080182ad0b758cd17f10893471e973.png" src="../_images/de0e9acfe8c9465be05bbe62280a2480ff080182ad0b758cd17f10893471e973.png" style="width: 1272px; height: 857px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id3">
+<h5>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -739,9 +804,15 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/686adedefdf2944d1d237d975a24c806c6529fe6e44b243b2fba0cdfac8fbc10.png"><img alt="../_images/686adedefdf2944d1d237d975a24c806c6529fe6e44b243b2fba0cdfac8fbc10.png" src="../_images/686adedefdf2944d1d237d975a24c806c6529fe6e44b243b2fba0cdfac8fbc10.png" style="width: 1054px; height: 436px;" />
+<a class="reference internal image-reference" href="../_images/8cc4a44f8cfeb874c2cacead0f3da8e48c2247cc0512922c0f60ab5313d6084f.png"><img alt="../_images/8cc4a44f8cfeb874c2cacead0f3da8e48c2247cc0512922c0f60ab5313d6084f.png" src="../_images/8cc4a44f8cfeb874c2cacead0f3da8e48c2247cc0512922c0f60ab5313d6084f.png" style="width: 856px; height: 397px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="id4">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#id4" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -806,7 +877,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/3ef540bde4d09025bf40785690fc974cae96407b078414b219c0f9fe3daf7f55.png"><img alt="../_images/3ef540bde4d09025bf40785690fc974cae96407b078414b219c0f9fe3daf7f55.png" src="../_images/3ef540bde4d09025bf40785690fc974cae96407b078414b219c0f9fe3daf7f55.png" style="width: 567px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/9f2c521a1b6553db6ed89634f622d1e21605296847adc42c59bf7467bc113e62.png"><img alt="../_images/9f2c521a1b6553db6ed89634f622d1e21605296847adc42c59bf7467bc113e62.png" src="../_images/9f2c521a1b6553db6ed89634f622d1e21605296847adc42c59bf7467bc113e62.png" style="width: 352px; height: 297px;" />
 </a>
 </div>
 </div>
@@ -837,13 +908,21 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/1fc9f790df6acca91ed72e6965c241ccc9a7056812ee39cd762266c9edbaeb25.png"><img alt="../_images/1fc9f790df6acca91ed72e6965c241ccc9a7056812ee39cd762266c9edbaeb25.png" src="../_images/1fc9f790df6acca91ed72e6965c241ccc9a7056812ee39cd762266c9edbaeb25.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/3fe941a9e821de17801d17abb00eacc01f32f5c39661a6d6123e552dd352138c.png"><img alt="../_images/3fe941a9e821de17801d17abb00eacc01f32f5c39661a6d6123e552dd352138c.png" src="../_images/3fe941a9e821de17801d17abb00eacc01f32f5c39661a6d6123e552dd352138c.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
 </section>
+</section>
 <section id="lam3">
 <h4>LAM3<a class="headerlink" href="#lam3" title="Link to this heading">#</a></h4>
+<section id="id5">
+<h5>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id5" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -852,22 +931,25 @@ Name: count, dtype: int64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#| hide-input</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leiden&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">umap</span><span class="p">(</span><span class="n">GSE135851_LAM3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">],</span> <span class="n">legend_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/9baf87bd39d31f691bdfadd4903d5e0b862c68e528a06234bc5c0973abfafda9.png"><img alt="../_images/9baf87bd39d31f691bdfadd4903d5e0b862c68e528a06234bc5c0973abfafda9.png" src="../_images/9baf87bd39d31f691bdfadd4903d5e0b862c68e528a06234bc5c0973abfafda9.png" style="width: 539px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/5dc1b5b5ec21014d97f7a1e69e45634b9fea7da7d371356702e5c9b2b1eda6ed.png"><img alt="../_images/5dc1b5b5ec21014d97f7a1e69e45634b9fea7da7d371356702e5c9b2b1eda6ed.png" src="../_images/5dc1b5b5ec21014d97f7a1e69e45634b9fea7da7d371356702e5c9b2b1eda6ed.png" style="width: 317px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/e4167955336b6868f501384efbce945053db9b66f29f63d778993c08f0547608.png"><img alt="../_images/e4167955336b6868f501384efbce945053db9b66f29f63d778993c08f0547608.png" src="../_images/e4167955336b6868f501384efbce945053db9b66f29f63d778993c08f0547608.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/51105d913672d8ec2385007abf9e0c3fa5dd18f306bf82ebbfad1727ed9f2028.png"><img alt="../_images/51105d913672d8ec2385007abf9e0c3fa5dd18f306bf82ebbfad1727ed9f2028.png" src="../_images/51105d913672d8ec2385007abf9e0c3fa5dd18f306bf82ebbfad1727ed9f2028.png" style="width: 375px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/a43d47f42f99bc1c7bd225adbf81d204423cf211b73d615b16c0fbbfd6116062.png"><img alt="../_images/a43d47f42f99bc1c7bd225adbf81d204423cf211b73d615b16c0fbbfd6116062.png" src="../_images/a43d47f42f99bc1c7bd225adbf81d204423cf211b73d615b16c0fbbfd6116062.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/384bbb2abeaae72ab1ad75ad67e61205f8eb4800aa4a700282e077e995020b0a.png"><img alt="../_images/384bbb2abeaae72ab1ad75ad67e61205f8eb4800aa4a700282e077e995020b0a.png" src="../_images/384bbb2abeaae72ab1ad75ad67e61205f8eb4800aa4a700282e077e995020b0a.png" style="width: 411px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id6">
+<h5>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -882,10 +964,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/89476d729359ca22110b4cfac2f3be852c489e13756c4dbc644d654f42323b8d.png"><img alt="../_images/89476d729359ca22110b4cfac2f3be852c489e13756c4dbc644d654f42323b8d.png" src="../_images/89476d729359ca22110b4cfac2f3be852c489e13756c4dbc644d654f42323b8d.png" style="width: 2222px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/97ffcc3f2eadd31b0b247f9e5a6475998d1c5852476a0e4038253cb75b2a42c7.png"><img alt="../_images/97ffcc3f2eadd31b0b247f9e5a6475998d1c5852476a0e4038253cb75b2a42c7.png" src="../_images/97ffcc3f2eadd31b0b247f9e5a6475998d1c5852476a0e4038253cb75b2a42c7.png" style="width: 1272px; height: 857px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id7">
+<h5>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -913,9 +998,15 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/31ac515c309301e4463c9855a23da968834b5e7410e2f93f03603aaef7f5f7be.png"><img alt="../_images/31ac515c309301e4463c9855a23da968834b5e7410e2f93f03603aaef7f5f7be.png" src="../_images/31ac515c309301e4463c9855a23da968834b5e7410e2f93f03603aaef7f5f7be.png" style="width: 1053px; height: 409px;" />
+<a class="reference internal image-reference" href="../_images/effb2c574471fc230e0182b83aaa39a42d8420999f064bb31ed76449a1bc0e70.png"><img alt="../_images/effb2c574471fc230e0182b83aaa39a42d8420999f064bb31ed76449a1bc0e70.png" src="../_images/effb2c574471fc230e0182b83aaa39a42d8420999f064bb31ed76449a1bc0e70.png" style="width: 856px; height: 376px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="id8">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#id8" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -980,7 +1071,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/c3b357409f44985e8531e8ad6cec381a2c2905f1535693b67843d4f70e15da76.png"><img alt="../_images/c3b357409f44985e8531e8ad6cec381a2c2905f1535693b67843d4f70e15da76.png" src="../_images/c3b357409f44985e8531e8ad6cec381a2c2905f1535693b67843d4f70e15da76.png" style="width: 567px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/77bc629186f2d4b0fe928884d30656d60067cccc5333c450362a84edba640efe.png"><img alt="../_images/77bc629186f2d4b0fe928884d30656d60067cccc5333c450362a84edba640efe.png" src="../_images/77bc629186f2d4b0fe928884d30656d60067cccc5333c450362a84edba640efe.png" style="width: 352px; height: 297px;" />
 </a>
 </div>
 </div>
@@ -1011,15 +1102,24 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ae9eef83b68af08d8029fc3b5b6dbbb3fbcb1ab4df81018ecaf1f634320b3304.png"><img alt="../_images/ae9eef83b68af08d8029fc3b5b6dbbb3fbcb1ab4df81018ecaf1f634320b3304.png" src="../_images/ae9eef83b68af08d8029fc3b5b6dbbb3fbcb1ab4df81018ecaf1f634320b3304.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/ffbb2ec6ef4d642d86a458edb02564de9fd712d3e908bd77e0ce595900e10971.png"><img alt="../_images/ffbb2ec6ef4d642d86a458edb02564de9fd712d3e908bd77e0ce595900e10971.png" src="../_images/ffbb2ec6ef4d642d86a458edb02564de9fd712d3e908bd77e0ce595900e10971.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
+</section>
 </section>
 <section id="lam4">
 <h4>LAM4<a class="headerlink" href="#lam4" title="Link to this heading">#</a></h4>
 <section id="removed-from-analysis-as-it-didn-t-have-any-mpo-cells">
 <h5>Removed from analysis as it didn’t have any MPO+ Cells.<a class="headerlink" href="#removed-from-analysis-as-it-didn-t-have-any-mpo-cells" title="Link to this heading">#</a></h5>
+</section>
+<section id="id9">
+<h5>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1036,14 +1136,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/4861794f074a4129b311f7122a59a9a5373d51b753a191a7c0a7c78ce23960ba.png"><img alt="../_images/4861794f074a4129b311f7122a59a9a5373d51b753a191a7c0a7c78ce23960ba.png" src="../_images/4861794f074a4129b311f7122a59a9a5373d51b753a191a7c0a7c78ce23960ba.png" style="width: 539px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/6c8b185d54ed49069d87a8c0a6acfc22d84eabfe707558a33bedeade2a4f79c6.png"><img alt="../_images/6c8b185d54ed49069d87a8c0a6acfc22d84eabfe707558a33bedeade2a4f79c6.png" src="../_images/6c8b185d54ed49069d87a8c0a6acfc22d84eabfe707558a33bedeade2a4f79c6.png" style="width: 310px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/02ac6b4ee3114f6b93e25c0f9d2ea0f8f769a0c656273f5d6f132a382a2f7b7d.png"><img alt="../_images/02ac6b4ee3114f6b93e25c0f9d2ea0f8f769a0c656273f5d6f132a382a2f7b7d.png" src="../_images/02ac6b4ee3114f6b93e25c0f9d2ea0f8f769a0c656273f5d6f132a382a2f7b7d.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/356c538bf52b5d38f1d129db48120a7ae4bc39dc735f1768fb74b6f69b6272a2.png"><img alt="../_images/356c538bf52b5d38f1d129db48120a7ae4bc39dc735f1768fb74b6f69b6272a2.png" src="../_images/356c538bf52b5d38f1d129db48120a7ae4bc39dc735f1768fb74b6f69b6272a2.png" style="width: 356px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/a23011fa437017a3b42792b01959f7a8dcb9b262a89b5366e33889d2dd0dc45a.png"><img alt="../_images/a23011fa437017a3b42792b01959f7a8dcb9b262a89b5366e33889d2dd0dc45a.png" src="../_images/a23011fa437017a3b42792b01959f7a8dcb9b262a89b5366e33889d2dd0dc45a.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/f82bdd778d98de8c770ae4dd73b5830e43baba3f9c61145b08011b33eda2a1c1.png"><img alt="../_images/f82bdd778d98de8c770ae4dd73b5830e43baba3f9c61145b08011b33eda2a1c1.png" src="../_images/f82bdd778d98de8c770ae4dd73b5830e43baba3f9c61145b08011b33eda2a1c1.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id10">
+<h5>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1058,10 +1161,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/8796ca8f05b517afef59a79bbfbe71c6d82a8ab960485368198117dc514ff071.png"><img alt="../_images/8796ca8f05b517afef59a79bbfbe71c6d82a8ab960485368198117dc514ff071.png" src="../_images/8796ca8f05b517afef59a79bbfbe71c6d82a8ab960485368198117dc514ff071.png" style="width: 2222px; height: 878px;" />
+<a class="reference internal image-reference" href="../_images/9afb3619244c4e240c15ef146f2d830875c673a4ec83533fff5d801171182904.png"><img alt="../_images/9afb3619244c4e240c15ef146f2d830875c673a4ec83533fff5d801171182904.png" src="../_images/9afb3619244c4e240c15ef146f2d830875c673a4ec83533fff5d801171182904.png" style="width: 1272px; height: 579px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id11">
+<h5>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1088,9 +1194,15 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/258e21ef08d4a7222c94f659fccd5d639ae94a4af6aaf7b828d347f291af1a89.png"><img alt="../_images/258e21ef08d4a7222c94f659fccd5d639ae94a4af6aaf7b828d347f291af1a89.png" src="../_images/258e21ef08d4a7222c94f659fccd5d639ae94a4af6aaf7b828d347f291af1a89.png" style="width: 909px; height: 409px;" />
+<a class="reference internal image-reference" href="../_images/f622420394506b87d0786ca7a202dfaa95eb2b1ac73c81e4649c213a1f56853f.png"><img alt="../_images/f622420394506b87d0786ca7a202dfaa95eb2b1ac73c81e4649c213a1f56853f.png" src="../_images/f622420394506b87d0786ca7a202dfaa95eb2b1ac73c81e4649c213a1f56853f.png" style="width: 742px; height: 376px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="id12">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -1156,7 +1268,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/baddd23a777e134005d0528c99dff93f9c92297b82d44281d5ec801850ff83ca.png"><img alt="../_images/baddd23a777e134005d0528c99dff93f9c92297b82d44281d5ec801850ff83ca.png" src="../_images/baddd23a777e134005d0528c99dff93f9c92297b82d44281d5ec801850ff83ca.png" style="width: 567px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/709e3995048b2cc74abac06ac23a47f937748566edbcfd2b46737d7b39a2a125.png"><img alt="../_images/709e3995048b2cc74abac06ac23a47f937748566edbcfd2b46737d7b39a2a125.png" src="../_images/709e3995048b2cc74abac06ac23a47f937748566edbcfd2b46737d7b39a2a125.png" style="width: 352px; height: 297px;" />
 </a>
 </div>
 </div>
@@ -1165,6 +1277,13 @@ Name: count, dtype: int64
 </section>
 <section id="joining-datasets-for-gse135851">
 <h3>Joining Datasets for GSE135851<a class="headerlink" href="#joining-datasets-for-gse135851" title="Link to this heading">#</a></h3>
+<section id="id13">
+<h4>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1181,14 +1300,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/fb3f3eced898a4ac67df4f1ebf8876d38349bb9b3b77dd08511e8198c0624292.png"><img alt="../_images/fb3f3eced898a4ac67df4f1ebf8876d38349bb9b3b77dd08511e8198c0624292.png" src="../_images/fb3f3eced898a4ac67df4f1ebf8876d38349bb9b3b77dd08511e8198c0624292.png" style="width: 539px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/be97c8b01819c6d9f55d046c0dd5736cfff0e2884ddd936613c8383d18f395c4.png"><img alt="../_images/be97c8b01819c6d9f55d046c0dd5736cfff0e2884ddd936613c8383d18f395c4.png" src="../_images/be97c8b01819c6d9f55d046c0dd5736cfff0e2884ddd936613c8383d18f395c4.png" style="width: 310px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/1fc327860b8e22f4774d62ce3e235e5bd962afec5ca2249d7ba93cdcaa6c4be5.png"><img alt="../_images/1fc327860b8e22f4774d62ce3e235e5bd962afec5ca2249d7ba93cdcaa6c4be5.png" src="../_images/1fc327860b8e22f4774d62ce3e235e5bd962afec5ca2249d7ba93cdcaa6c4be5.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/bf88940a75916d7c03dd2c6df86005470b917a16d7ea0e32a2f4c7ea91799d46.png"><img alt="../_images/bf88940a75916d7c03dd2c6df86005470b917a16d7ea0e32a2f4c7ea91799d46.png" src="../_images/bf88940a75916d7c03dd2c6df86005470b917a16d7ea0e32a2f4c7ea91799d46.png" style="width: 385px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/1809975bef6ee39c2ecea29104e8b0126585794f6d86786a2a658826701bceb4.png"><img alt="../_images/1809975bef6ee39c2ecea29104e8b0126585794f6d86786a2a658826701bceb4.png" src="../_images/1809975bef6ee39c2ecea29104e8b0126585794f6d86786a2a658826701bceb4.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/640c8989f13642c15cc3c04788142ffeef7b01639cf20ea65ac21f00dadd8c57.png"><img alt="../_images/640c8989f13642c15cc3c04788142ffeef7b01639cf20ea65ac21f00dadd8c57.png" src="../_images/640c8989f13642c15cc3c04788142ffeef7b01639cf20ea65ac21f00dadd8c57.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id14">
+<h4>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1203,10 +1325,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/bd7eecdaa2feb2a964d56879cb622178c85a0049f06d8faef462dd3e5ad83ed0.png"><img alt="../_images/bd7eecdaa2feb2a964d56879cb622178c85a0049f06d8faef462dd3e5ad83ed0.png" src="../_images/bd7eecdaa2feb2a964d56879cb622178c85a0049f06d8faef462dd3e5ad83ed0.png" style="width: 2222px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/c6bf7b9cc1b75c011b284dbf1a027c5761ecf652298bf699c88b814832cdc19d.png"><img alt="../_images/c6bf7b9cc1b75c011b284dbf1a027c5761ecf652298bf699c88b814832cdc19d.png" src="../_images/c6bf7b9cc1b75c011b284dbf1a027c5761ecf652298bf699c88b814832cdc19d.png" style="width: 1272px; height: 857px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id15">
+<h4>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1233,7 +1358,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/f968afb6f313b03f83a41c97b06c57a9d38fd50a0b26cc0b5fb8a5236f850b2f.png"><img alt="../_images/f968afb6f313b03f83a41c97b06c57a9d38fd50a0b26cc0b5fb8a5236f850b2f.png" src="../_images/f968afb6f313b03f83a41c97b06c57a9d38fd50a0b26cc0b5fb8a5236f850b2f.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/2c35c771bc789bd17865abf032eb3d1d3941120d4b8f9dd4bed78180bbb93c33.png"><img alt="../_images/2c35c771bc789bd17865abf032eb3d1d3941120d4b8f9dd4bed78180bbb93c33.png" src="../_images/2c35c771bc789bd17865abf032eb3d1d3941120d4b8f9dd4bed78180bbb93c33.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
@@ -1264,7 +1389,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/a1fa628d8fd5aa08a1f79a9797d4ea57e6d8fd49c68960931b4b38d260dc54f2.png"><img alt="../_images/a1fa628d8fd5aa08a1f79a9797d4ea57e6d8fd49c68960931b4b38d260dc54f2.png" src="../_images/a1fa628d8fd5aa08a1f79a9797d4ea57e6d8fd49c68960931b4b38d260dc54f2.png" style="width: 1151px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/c119aad680ae8c71ac7f8ac84bf26b9f918ce40f74cc404f579e4ac77e91cc18.png"><img alt="../_images/c119aad680ae8c71ac7f8ac84bf26b9f918ce40f74cc404f579e4ac77e91cc18.png" src="../_images/c119aad680ae8c71ac7f8ac84bf26b9f918ce40f74cc404f579e4ac77e91cc18.png" style="width: 966px; height: 269px;" />
 </a>
 </div>
 </div>
@@ -1295,15 +1420,23 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/b73c51dadf328ce02167be884936b3f8e37b244f1660d165c0a20c651493ebfe.png"><img alt="../_images/b73c51dadf328ce02167be884936b3f8e37b244f1660d165c0a20c651493ebfe.png" src="../_images/b73c51dadf328ce02167be884936b3f8e37b244f1660d165c0a20c651493ebfe.png" style="width: 1257px; height: 356px;" />
+<a class="reference internal image-reference" href="../_images/4f29082d04dea6a507b060a7b732ce1722830611d6517ca6ab886dd98bf7d03a.png"><img alt="../_images/4f29082d04dea6a507b060a7b732ce1722830611d6517ca6ab886dd98bf7d03a.png" src="../_images/4f29082d04dea6a507b060a7b732ce1722830611d6517ca6ab886dd98bf7d03a.png" style="width: 1085px; height: 333px;" />
 </a>
 </div>
 </div>
 </section>
+</section>
 <section id="gse190260">
 <h3>GSE190260<a class="headerlink" href="#gse190260" title="Link to this heading">#</a></h3>
-<section id="id1">
-<h4>LAM1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<section id="id16">
+<h4>LAM1<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<section id="id17">
+<h5>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id17" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1320,14 +1453,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/96584e63c9f4ad488e9e51b0abbedd01ce2902fb2805221b0dcffd223ebcfe6e.png"><img alt="../_images/96584e63c9f4ad488e9e51b0abbedd01ce2902fb2805221b0dcffd223ebcfe6e.png" src="../_images/96584e63c9f4ad488e9e51b0abbedd01ce2902fb2805221b0dcffd223ebcfe6e.png" style="width: 546px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/cfeceda7d4e71dcbf6f8033c126a07be0a296dad3cc3dfaceb27b862449410b3.png"><img alt="../_images/cfeceda7d4e71dcbf6f8033c126a07be0a296dad3cc3dfaceb27b862449410b3.png" src="../_images/cfeceda7d4e71dcbf6f8033c126a07be0a296dad3cc3dfaceb27b862449410b3.png" style="width: 316px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/34ba6035f3a48c3f0d5f9c684b16051dac3447ab52e785084202607b8eecc12a.png"><img alt="../_images/34ba6035f3a48c3f0d5f9c684b16051dac3447ab52e785084202607b8eecc12a.png" src="../_images/34ba6035f3a48c3f0d5f9c684b16051dac3447ab52e785084202607b8eecc12a.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/240f7d28ff05d15a1830cc34e270cf501560330d2a1d0b625ef2da7251c8b21d.png"><img alt="../_images/240f7d28ff05d15a1830cc34e270cf501560330d2a1d0b625ef2da7251c8b21d.png" src="../_images/240f7d28ff05d15a1830cc34e270cf501560330d2a1d0b625ef2da7251c8b21d.png" style="width: 356px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/73f8e7dd9305c0307b721d8b51ac6cc8dd4677da68410afd755dbe2f6b0e66d8.png"><img alt="../_images/73f8e7dd9305c0307b721d8b51ac6cc8dd4677da68410afd755dbe2f6b0e66d8.png" src="../_images/73f8e7dd9305c0307b721d8b51ac6cc8dd4677da68410afd755dbe2f6b0e66d8.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/19314c95e54e76b230970036acf30652d5669fc83df00127f49a3f4d77d0212a.png"><img alt="../_images/19314c95e54e76b230970036acf30652d5669fc83df00127f49a3f4d77d0212a.png" src="../_images/19314c95e54e76b230970036acf30652d5669fc83df00127f49a3f4d77d0212a.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id18">
+<h5>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id18" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1342,10 +1478,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/fa936243c45564c6e9af88a654970b6374bdfc67f27651309edf8d581c5488a0.png"><img alt="../_images/fa936243c45564c6e9af88a654970b6374bdfc67f27651309edf8d581c5488a0.png" src="../_images/fa936243c45564c6e9af88a654970b6374bdfc67f27651309edf8d581c5488a0.png" style="width: 2244px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/79b10615e5c91b39394bdeffe9f6be5f7943de9b8186d77757fd5f2fab78ec4e.png"><img alt="../_images/79b10615e5c91b39394bdeffe9f6be5f7943de9b8186d77757fd5f2fab78ec4e.png" src="../_images/79b10615e5c91b39394bdeffe9f6be5f7943de9b8186d77757fd5f2fab78ec4e.png" style="width: 1272px; height: 857px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id19">
+<h5>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id19" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1373,9 +1512,15 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/da43b34a29a9181edafb293c47fabf1f998dffcb7c6a29565d989338dbfe0be2.png"><img alt="../_images/da43b34a29a9181edafb293c47fabf1f998dffcb7c6a29565d989338dbfe0be2.png" src="../_images/da43b34a29a9181edafb293c47fabf1f998dffcb7c6a29565d989338dbfe0be2.png" style="width: 1060px; height: 569px;" />
+<a class="reference internal image-reference" href="../_images/a3640d3973361c1fcf802d4784963d9efa091af42099a357c53d0b1825caa733.png"><img alt="../_images/a3640d3973361c1fcf802d4784963d9efa091af42099a357c53d0b1825caa733.png" src="../_images/a3640d3973361c1fcf802d4784963d9efa091af42099a357c53d0b1825caa733.png" style="width: 865px; height: 482px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="id20">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -1418,8 +1563,8 @@ Name: count, dtype: int64
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cell_Type
-Other              2184
-Neutrophil MPO+       3
+Other              16693
+Neutrophil MPO+        7
 Name: count, dtype: int64
 </pre></div>
 </div>
@@ -1440,7 +1585,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/a19cbaa1a707333fc91fd32b0b51de68e05d5cc448cbf113c4634fd8ec5f5715.png"><img alt="../_images/a19cbaa1a707333fc91fd32b0b51de68e05d5cc448cbf113c4634fd8ec5f5715.png" src="../_images/a19cbaa1a707333fc91fd32b0b51de68e05d5cc448cbf113c4634fd8ec5f5715.png" style="width: 567px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/67e713150bf1ed8ea83c3967c34fb4f4d707c0877169c660ae6568724c3a867b.png"><img alt="../_images/67e713150bf1ed8ea83c3967c34fb4f4d707c0877169c660ae6568724c3a867b.png" src="../_images/67e713150bf1ed8ea83c3967c34fb4f4d707c0877169c660ae6568724c3a867b.png" style="width: 352px; height: 297px;" />
 </a>
 </div>
 </div>
@@ -1471,13 +1616,21 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/c193620ffa6272abca83b9e206429f06633b3ac8c655dcf57707facf5d36a601.png"><img alt="../_images/c193620ffa6272abca83b9e206429f06633b3ac8c655dcf57707facf5d36a601.png" src="../_images/c193620ffa6272abca83b9e206429f06633b3ac8c655dcf57707facf5d36a601.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/b1e9b8344810d7eefff39588395de8672f6878400ceabddbb3f3a83e4ad7b5e3.png"><img alt="../_images/b1e9b8344810d7eefff39588395de8672f6878400ceabddbb3f3a83e4ad7b5e3.png" src="../_images/b1e9b8344810d7eefff39588395de8672f6878400ceabddbb3f3a83e4ad7b5e3.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
 </section>
-<section id="id2">
-<h4>LAM2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+</section>
+<section id="id21">
+<h4>LAM2<a class="headerlink" href="#id21" title="Link to this heading">#</a></h4>
+<section id="id22">
+<h5>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1494,14 +1647,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/c83deffe2a8f19ee6ae23610ab0a7d022fb8f79f4583495c845b137379a67086.png"><img alt="../_images/c83deffe2a8f19ee6ae23610ab0a7d022fb8f79f4583495c845b137379a67086.png" src="../_images/c83deffe2a8f19ee6ae23610ab0a7d022fb8f79f4583495c845b137379a67086.png" style="width: 585px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/95bf706d628d3fc73b58a1d0639fd034a103cbd587d2772e5caa791e9ea8ac68.png"><img alt="../_images/95bf706d628d3fc73b58a1d0639fd034a103cbd587d2772e5caa791e9ea8ac68.png" src="../_images/95bf706d628d3fc73b58a1d0639fd034a103cbd587d2772e5caa791e9ea8ac68.png" style="width: 310px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/4055eba41eefdef6447524a04ae2a90d5aa9e438972900f9cc86632bee2273fc.png"><img alt="../_images/4055eba41eefdef6447524a04ae2a90d5aa9e438972900f9cc86632bee2273fc.png" src="../_images/4055eba41eefdef6447524a04ae2a90d5aa9e438972900f9cc86632bee2273fc.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/399811a52bc8e4d33efbf33794f89d8ce4c3e018696004817cb776a435b2a01e.png"><img alt="../_images/399811a52bc8e4d33efbf33794f89d8ce4c3e018696004817cb776a435b2a01e.png" src="../_images/399811a52bc8e4d33efbf33794f89d8ce4c3e018696004817cb776a435b2a01e.png" style="width: 356px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/8a1758fd6232444126089f3fe4b0f937e33b7aee5470c5865ad5dc4e534485be.png"><img alt="../_images/8a1758fd6232444126089f3fe4b0f937e33b7aee5470c5865ad5dc4e534485be.png" src="../_images/8a1758fd6232444126089f3fe4b0f937e33b7aee5470c5865ad5dc4e534485be.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/b908a41b55eda02224cc46e71e5ce308373758720bcb556d218b1f9461372f04.png"><img alt="../_images/b908a41b55eda02224cc46e71e5ce308373758720bcb556d218b1f9461372f04.png" src="../_images/b908a41b55eda02224cc46e71e5ce308373758720bcb556d218b1f9461372f04.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id23">
+<h5>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1516,10 +1672,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/e5ca484c658bf758843356e8dbd7374aba52f6d903999f1111fa6b3830b8ace7.png"><img alt="../_images/e5ca484c658bf758843356e8dbd7374aba52f6d903999f1111fa6b3830b8ace7.png" src="../_images/e5ca484c658bf758843356e8dbd7374aba52f6d903999f1111fa6b3830b8ace7.png" style="width: 2235px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/de0e9acfe8c9465be05bbe62280a2480ff080182ad0b758cd17f10893471e973.png"><img alt="../_images/de0e9acfe8c9465be05bbe62280a2480ff080182ad0b758cd17f10893471e973.png" src="../_images/de0e9acfe8c9465be05bbe62280a2480ff080182ad0b758cd17f10893471e973.png" style="width: 1272px; height: 857px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id24">
+<h5>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id24" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1547,9 +1706,15 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/b5a814705dce72ad307e52d08884c1e6825cfe7646fa62e59c303d1ad58e0284.png"><img alt="../_images/b5a814705dce72ad307e52d08884c1e6825cfe7646fa62e59c303d1ad58e0284.png" src="../_images/b5a814705dce72ad307e52d08884c1e6825cfe7646fa62e59c303d1ad58e0284.png" style="width: 1060px; height: 622px;" />
+<a class="reference internal image-reference" href="../_images/8cc4a44f8cfeb874c2cacead0f3da8e48c2247cc0512922c0f60ab5313d6084f.png"><img alt="../_images/8cc4a44f8cfeb874c2cacead0f3da8e48c2247cc0512922c0f60ab5313d6084f.png" src="../_images/8cc4a44f8cfeb874c2cacead0f3da8e48c2247cc0512922c0f60ab5313d6084f.png" style="width: 856px; height: 397px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="id25">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#id25" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -1592,8 +1757,8 @@ Name: count, dtype: int64
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cell_Type
-Other              2029
-Neutrophil MPO+      11
+Other              37429
+Neutrophil MPO+        7
 Name: count, dtype: int64
 </pre></div>
 </div>
@@ -1614,7 +1779,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/1a57aa1c5dee4b85b397f91ef96f7df522705ffdfaed15f3bcea82d9c86c3b45.png"><img alt="../_images/1a57aa1c5dee4b85b397f91ef96f7df522705ffdfaed15f3bcea82d9c86c3b45.png" src="../_images/1a57aa1c5dee4b85b397f91ef96f7df522705ffdfaed15f3bcea82d9c86c3b45.png" style="width: 567px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/9f2c521a1b6553db6ed89634f622d1e21605296847adc42c59bf7467bc113e62.png"><img alt="../_images/9f2c521a1b6553db6ed89634f622d1e21605296847adc42c59bf7467bc113e62.png" src="../_images/9f2c521a1b6553db6ed89634f622d1e21605296847adc42c59bf7467bc113e62.png" style="width: 352px; height: 297px;" />
 </a>
 </div>
 </div>
@@ -1645,13 +1810,21 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/8e66432f7dc0f98f5347da0c053c8bfcb6e5207dcc8a620d94fd797518242116.png"><img alt="../_images/8e66432f7dc0f98f5347da0c053c8bfcb6e5207dcc8a620d94fd797518242116.png" src="../_images/8e66432f7dc0f98f5347da0c053c8bfcb6e5207dcc8a620d94fd797518242116.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/3fe941a9e821de17801d17abb00eacc01f32f5c39661a6d6123e552dd352138c.png"><img alt="../_images/3fe941a9e821de17801d17abb00eacc01f32f5c39661a6d6123e552dd352138c.png" src="../_images/3fe941a9e821de17801d17abb00eacc01f32f5c39661a6d6123e552dd352138c.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
 </section>
-<section id="id3">
-<h4>LAM3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+</section>
+<section id="id26">
+<h4>LAM3<a class="headerlink" href="#id26" title="Link to this heading">#</a></h4>
+<section id="id27">
+<h5>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id27" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1668,14 +1841,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/74077ce8df323a51e6ceb6922ea75f6912de90b5116fd3c004588663708ccaca.png"><img alt="../_images/74077ce8df323a51e6ceb6922ea75f6912de90b5116fd3c004588663708ccaca.png" src="../_images/74077ce8df323a51e6ceb6922ea75f6912de90b5116fd3c004588663708ccaca.png" style="width: 585px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/09304a657dba1420ee27b7bc014512458d4e6a137f346c966c35252ffe2b0665.png"><img alt="../_images/09304a657dba1420ee27b7bc014512458d4e6a137f346c966c35252ffe2b0665.png" src="../_images/09304a657dba1420ee27b7bc014512458d4e6a137f346c966c35252ffe2b0665.png" style="width: 310px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/41b80002ad52de83ddb05f351df34f66334e878d483f1d8a303f440e23663b78.png"><img alt="../_images/41b80002ad52de83ddb05f351df34f66334e878d483f1d8a303f440e23663b78.png" src="../_images/41b80002ad52de83ddb05f351df34f66334e878d483f1d8a303f440e23663b78.png" style="width: 597px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/fa22b280cf1b0ee6c2889985479e6530d3bd66c4ccf5a36384b9d392ca3b793d.png"><img alt="../_images/fa22b280cf1b0ee6c2889985479e6530d3bd66c4ccf5a36384b9d392ca3b793d.png" src="../_images/fa22b280cf1b0ee6c2889985479e6530d3bd66c4ccf5a36384b9d392ca3b793d.png" style="width: 356px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/ea225b95729e57612237eb1285f526522b45209a2e22ee837f3ada49e4b91982.png"><img alt="../_images/ea225b95729e57612237eb1285f526522b45209a2e22ee837f3ada49e4b91982.png" src="../_images/ea225b95729e57612237eb1285f526522b45209a2e22ee837f3ada49e4b91982.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/e8a8c9aeea73dd62cb5003c0bdc46d9b55260b8ee4b46c1752c3603f4b77f890.png"><img alt="../_images/e8a8c9aeea73dd62cb5003c0bdc46d9b55260b8ee4b46c1752c3603f4b77f890.png" src="../_images/e8a8c9aeea73dd62cb5003c0bdc46d9b55260b8ee4b46c1752c3603f4b77f890.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id28">
+<h5>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id28" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1694,6 +1870,9 @@ Name: count, dtype: int64
 </a>
 </div>
 </div>
+</section>
+<section id="id29">
+<h5>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id29" title="Link to this heading">#</a></h5>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1724,6 +1903,12 @@ Name: count, dtype: int64
 <a class="reference internal image-reference" href="../_images/0e80a33869f00ddbf7d20399c5619f899bb18b5429944ea999bc31bb95a11d13.png"><img alt="../_images/0e80a33869f00ddbf7d20399c5619f899bb18b5429944ea999bc31bb95a11d13.png" src="../_images/0e80a33869f00ddbf7d20399c5619f899bb18b5429944ea999bc31bb95a11d13.png" style="width: 1060px; height: 728px;" />
 </a>
 </div>
+</div>
+</section>
+<section id="id30">
+<h5>Cells were subset using MPO as a positive marker.<a class="headerlink" href="#id30" title="Link to this heading">#</a></h5>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cells with expression higher than 0.001 were marked as &#39;Neutrophil MPO+&#39;.
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -1766,7 +1951,7 @@ Name: count, dtype: int64
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cell_Type
-Other              15352
+Other              57943
 Neutrophil MPO+       14
 Name: count, dtype: int64
 </pre></div>
@@ -1788,7 +1973,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ab2e0ba49eb44163c68eea6370226eeee460f50f4db21e4f8701a22132cf52e0.png"><img alt="../_images/ab2e0ba49eb44163c68eea6370226eeee460f50f4db21e4f8701a22132cf52e0.png" src="../_images/ab2e0ba49eb44163c68eea6370226eeee460f50f4db21e4f8701a22132cf52e0.png" style="width: 567px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/77bc629186f2d4b0fe928884d30656d60067cccc5333c450362a84edba640efe.png"><img alt="../_images/77bc629186f2d4b0fe928884d30656d60067cccc5333c450362a84edba640efe.png" src="../_images/77bc629186f2d4b0fe928884d30656d60067cccc5333c450362a84edba640efe.png" style="width: 352px; height: 297px;" />
 </a>
 </div>
 </div>
@@ -1819,14 +2004,22 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/de7f137306bfe142b77dbb32294f1c6df1f7bcb3d102cb685b58e2a2bbd16c23.png"><img alt="../_images/de7f137306bfe142b77dbb32294f1c6df1f7bcb3d102cb685b58e2a2bbd16c23.png" src="../_images/de7f137306bfe142b77dbb32294f1c6df1f7bcb3d102cb685b58e2a2bbd16c23.png" style="width: 1083px; height: 295px;" />
+<a class="reference internal image-reference" href="../_images/ac098cdeb874e96ef7a98952a25ba08df439d1ef8ecee83f3f2e78fc11566340.png"><img alt="../_images/ac098cdeb874e96ef7a98952a25ba08df439d1ef8ecee83f3f2e78fc11566340.png" src="../_images/ac098cdeb874e96ef7a98952a25ba08df439d1ef8ecee83f3f2e78fc11566340.png" style="width: 908px; height: 257px;" />
 </a>
 </div>
 </div>
 </section>
 </section>
+</section>
 <section id="joining-datasets-for-gse190260">
 <h3>Joining DataSets for GSE190260<a class="headerlink" href="#joining-datasets-for-gse190260" title="Link to this heading">#</a></h3>
+<section id="id31">
+<h4>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id31" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1843,14 +2036,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/3f06f14cd75af7755a149f4cfe520b506b1ae6887043cb04b01017f42e798842.png"><img alt="../_images/3f06f14cd75af7755a149f4cfe520b506b1ae6887043cb04b01017f42e798842.png" src="../_images/3f06f14cd75af7755a149f4cfe520b506b1ae6887043cb04b01017f42e798842.png" style="width: 585px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/bca27e0ba8a2c22e26a3d1f7a7a1ea1b3d70bb9e01e6008a9ee2ae620df3268e.png"><img alt="../_images/bca27e0ba8a2c22e26a3d1f7a7a1ea1b3d70bb9e01e6008a9ee2ae620df3268e.png" src="../_images/bca27e0ba8a2c22e26a3d1f7a7a1ea1b3d70bb9e01e6008a9ee2ae620df3268e.png" style="width: 310px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/1bce03cc62424718db739ff5d2bcd93acf60503e5522c6e45bccf5311a5dce82.png"><img alt="../_images/1bce03cc62424718db739ff5d2bcd93acf60503e5522c6e45bccf5311a5dce82.png" src="../_images/1bce03cc62424718db739ff5d2bcd93acf60503e5522c6e45bccf5311a5dce82.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/ad3c0d5557d96008eb0c8a424c989682823f5cbce6de67edbd646767e43be612.png"><img alt="../_images/ad3c0d5557d96008eb0c8a424c989682823f5cbce6de67edbd646767e43be612.png" src="../_images/ad3c0d5557d96008eb0c8a424c989682823f5cbce6de67edbd646767e43be612.png" style="width: 385px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/52fb23bdf94006691d71736a5de4493d0e751913f9ae6a9515a998ab8e875def.png"><img alt="../_images/52fb23bdf94006691d71736a5de4493d0e751913f9ae6a9515a998ab8e875def.png" src="../_images/52fb23bdf94006691d71736a5de4493d0e751913f9ae6a9515a998ab8e875def.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/b6a903945d7579689d986f3543398d674d1d7a0cc4696bc9a2b02a0f283467dd.png"><img alt="../_images/b6a903945d7579689d986f3543398d674d1d7a0cc4696bc9a2b02a0f283467dd.png" src="../_images/b6a903945d7579689d986f3543398d674d1d7a0cc4696bc9a2b02a0f283467dd.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id32">
+<h4>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id32" title="Link to this heading">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1865,10 +2061,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/509762a8422660b99410b79ddcc569c49190e19a60883091dbcbe91a27cdee13.png"><img alt="../_images/509762a8422660b99410b79ddcc569c49190e19a60883091dbcbe91a27cdee13.png" src="../_images/509762a8422660b99410b79ddcc569c49190e19a60883091dbcbe91a27cdee13.png" style="width: 2235px; height: 1313px;" />
+<a class="reference internal image-reference" href="../_images/cd8c776069ab9abb76f35153f70b94153af7370aff5bc12771e8f74e01a8c36a.png"><img alt="../_images/cd8c776069ab9abb76f35153f70b94153af7370aff5bc12771e8f74e01a8c36a.png" src="../_images/cd8c776069ab9abb76f35153f70b94153af7370aff5bc12771e8f74e01a8c36a.png" style="width: 1272px; height: 857px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id33">
+<h4>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id33" title="Link to this heading">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1895,7 +2094,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/6d5a6c575d724c9d975add0592dac3dfb1036a19f99c3d32a3819dd3d0d43e14.png"><img alt="../_images/6d5a6c575d724c9d975add0592dac3dfb1036a19f99c3d32a3819dd3d0d43e14.png" src="../_images/6d5a6c575d724c9d975add0592dac3dfb1036a19f99c3d32a3819dd3d0d43e14.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/2c35c771bc789bd17865abf032eb3d1d3941120d4b8f9dd4bed78180bbb93c33.png"><img alt="../_images/2c35c771bc789bd17865abf032eb3d1d3941120d4b8f9dd4bed78180bbb93c33.png" src="../_images/2c35c771bc789bd17865abf032eb3d1d3941120d4b8f9dd4bed78180bbb93c33.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
@@ -1926,7 +2125,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/d4aca64da9da5fa7e97f02405bed3300e0d417f2dfe548cb63a147963d262f5d.png"><img alt="../_images/d4aca64da9da5fa7e97f02405bed3300e0d417f2dfe548cb63a147963d262f5d.png" src="../_images/d4aca64da9da5fa7e97f02405bed3300e0d417f2dfe548cb63a147963d262f5d.png" style="width: 1151px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/9511b25c9283bacbc3d0b7b33b5ccb96d675c8a33c080c3054ba64832c00074f.png"><img alt="../_images/9511b25c9283bacbc3d0b7b33b5ccb96d675c8a33c080c3054ba64832c00074f.png" src="../_images/9511b25c9283bacbc3d0b7b33b5ccb96d675c8a33c080c3054ba64832c00074f.png" style="width: 966px; height: 269px;" />
 </a>
 </div>
 </div>
@@ -1957,13 +2156,21 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/2b1c9794f520e12ae3bcadc2ec4ed694dee85e69d135625ba0f00460249de5a3.png"><img alt="../_images/2b1c9794f520e12ae3bcadc2ec4ed694dee85e69d135625ba0f00460249de5a3.png" src="../_images/2b1c9794f520e12ae3bcadc2ec4ed694dee85e69d135625ba0f00460249de5a3.png" style="width: 1257px; height: 356px;" />
+<a class="reference internal image-reference" href="../_images/fb7fcabacd76f3d6253211efe73084af4f272e875cdb445fa3b3e71e19c53e64.png"><img alt="../_images/fb7fcabacd76f3d6253211efe73084af4f272e875cdb445fa3b3e71e19c53e64.png" src="../_images/fb7fcabacd76f3d6253211efe73084af4f272e875cdb445fa3b3e71e19c53e64.png" style="width: 1085px; height: 333px;" />
 </a>
 </div>
 </div>
 </section>
+</section>
 <section id="joining-gse190260-lam-with-gse135851-lam">
 <h3>Joining GSE190260_LAM with GSE135851_LAM<a class="headerlink" href="#joining-gse190260-lam-with-gse135851-lam" title="Link to this heading">#</a></h3>
+<section id="id34">
+<h4>Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.<a class="headerlink" href="#id34" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>leiden</strong>: Shows the ‘leiden’ clusters that were made. These clusters of cells are done based on their transcriptomic similarities. Showing potential cell populations based on their most differentially expressed set of genes on each population.</p></li>
+<li><p><strong>dataset</strong>: Shows a colorcoded umap based on the dataset the samples come from.</p></li>
+<li><p><strong>sample</strong>: Shows a colorcoded umap based on the samples it contains.</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1980,14 +2187,17 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/b3372d7bfd9a032eb2fb203ee3b432babbf210c6d09b02d6c13104fa20c28357.png"><img alt="../_images/b3372d7bfd9a032eb2fb203ee3b432babbf210c6d09b02d6c13104fa20c28357.png" src="../_images/b3372d7bfd9a032eb2fb203ee3b432babbf210c6d09b02d6c13104fa20c28357.png" style="width: 546px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/28a01009fe72341fb98e6cfc532bf81898c03286009d88bd724d3acae2d91c28.png"><img alt="../_images/28a01009fe72341fb98e6cfc532bf81898c03286009d88bd724d3acae2d91c28.png" src="../_images/28a01009fe72341fb98e6cfc532bf81898c03286009d88bd724d3acae2d91c28.png" style="width: 316px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/07716df02a7a19d060cd910ab976c401bd9425755976316404d50bc5e286f965.png"><img alt="../_images/07716df02a7a19d060cd910ab976c401bd9425755976316404d50bc5e286f965.png" src="../_images/07716df02a7a19d060cd910ab976c401bd9425755976316404d50bc5e286f965.png" style="width: 626px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/e6de27e916d6b662e87dc912dc49bbb8fa9b7fc265b02457c609703d03570cd7.png"><img alt="../_images/e6de27e916d6b662e87dc912dc49bbb8fa9b7fc265b02457c609703d03570cd7.png" src="../_images/e6de27e916d6b662e87dc912dc49bbb8fa9b7fc265b02457c609703d03570cd7.png" style="width: 380px; height: 297px;" />
 </a>
-<a class="reference internal image-reference" href="../_images/3482c5c005a106c84e57327e732049263dedd11df8d7d5c0a519201d369c3fb3.png"><img alt="../_images/3482c5c005a106c84e57327e732049263dedd11df8d7d5c0a519201d369c3fb3.png" src="../_images/3482c5c005a106c84e57327e732049263dedd11df8d7d5c0a519201d369c3fb3.png" style="width: 633px; height: 438px;" />
+<a class="reference internal image-reference" href="../_images/89eac929dc3ae20b4964453e07986feeedf5da908d32be33ade3fc2d716726cf.png"><img alt="../_images/89eac929dc3ae20b4964453e07986feeedf5da908d32be33ade3fc2d716726cf.png" src="../_images/89eac929dc3ae20b4964453e07986feeedf5da908d32be33ade3fc2d716726cf.png" style="width: 385px; height: 297px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id35">
+<h4>UMAP showing expression of some Neutrophil markers within the population.<a class="headerlink" href="#id35" title="Link to this heading">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -2002,10 +2212,13 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/6153b30f5b45861f6d7ab10c9e55ac1a8e62ee9b5685c69fb97d69c09a03dd7b.png"><img alt="../_images/6153b30f5b45861f6d7ab10c9e55ac1a8e62ee9b5685c69fb97d69c09a03dd7b.png" src="../_images/6153b30f5b45861f6d7ab10c9e55ac1a8e62ee9b5685c69fb97d69c09a03dd7b.png" style="width: 2222px; height: 878px;" />
+<a class="reference internal image-reference" href="../_images/dd3d491ef0fac9f4c202a0fcc9dcf3446dc6d2f381eea86230ffe1d14343aaf3.png"><img alt="../_images/dd3d491ef0fac9f4c202a0fcc9dcf3446dc6d2f381eea86230ffe1d14343aaf3.png" src="../_images/dd3d491ef0fac9f4c202a0fcc9dcf3446dc6d2f381eea86230ffe1d14343aaf3.png" style="width: 1272px; height: 579px;" />
 </a>
 </div>
 </div>
+</section>
+<section id="id36">
+<h4>Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.<a class="headerlink" href="#id36" title="Link to this heading">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -2032,7 +2245,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/190cc03564d87244d2240c4d63e5ae872c02645eb837252455eb8535adf658c6.png"><img alt="../_images/190cc03564d87244d2240c4d63e5ae872c02645eb837252455eb8535adf658c6.png" src="../_images/190cc03564d87244d2240c4d63e5ae872c02645eb837252455eb8535adf658c6.png" style="width: 1083px; height: 276px;" />
+<a class="reference internal image-reference" href="../_images/8291d33cc7d18ce2b6c7d9a87a6f8419d7f562574247c8526ba4de1295697aaf.png"><img alt="../_images/8291d33cc7d18ce2b6c7d9a87a6f8419d7f562574247c8526ba4de1295697aaf.png" src="../_images/8291d33cc7d18ce2b6c7d9a87a6f8419d7f562574247c8526ba4de1295697aaf.png" style="width: 908px; height: 248px;" />
 </a>
 </div>
 </div>
@@ -2063,7 +2276,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ffa1a2dded207abb21a1cf0a5e106d7d2246b9f50121cc2e611df88232027d9f.png"><img alt="../_images/ffa1a2dded207abb21a1cf0a5e106d7d2246b9f50121cc2e611df88232027d9f.png" src="../_images/ffa1a2dded207abb21a1cf0a5e106d7d2246b9f50121cc2e611df88232027d9f.png" style="width: 1151px; height: 356px;" />
+<a class="reference internal image-reference" href="../_images/fe926fe673eb9dbea53b74a6bb57541beb99cfcd76226f33479430978ed6f949.png"><img alt="../_images/fe926fe673eb9dbea53b74a6bb57541beb99cfcd76226f33479430978ed6f949.png" src="../_images/fe926fe673eb9dbea53b74a6bb57541beb99cfcd76226f33479430978ed6f949.png" style="width: 966px; height: 333px;" />
 </a>
 </div>
 </div>
@@ -2094,7 +2307,7 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/b42eb3496505b1773705ed4ae3a9eada2d4d8aa50baf72b6093c94c01daf52e8.png"><img alt="../_images/b42eb3496505b1773705ed4ae3a9eada2d4d8aa50baf72b6093c94c01daf52e8.png" src="../_images/b42eb3496505b1773705ed4ae3a9eada2d4d8aa50baf72b6093c94c01daf52e8.png" style="width: 1257px; height: 516px;" />
+<a class="reference internal image-reference" href="../_images/2dc165cbaa1182ea36c43919e53ef46aa32b071e20dc9b54ad683c6a2f210cb3.png"><img alt="../_images/2dc165cbaa1182ea36c43919e53ef46aa32b071e20dc9b54ad683c6a2f210cb3.png" src="../_images/2dc165cbaa1182ea36c43919e53ef46aa32b071e20dc9b54ad683c6a2f210cb3.png" style="width: 1085px; height: 461px;" />
 </a>
 </div>
 </div>
@@ -2125,10 +2338,11 @@ Name: count, dtype: int64
 </div>
 </details>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ac6e948d1939325eeac5764df67a997378e0845718331c22a53f17373f73e479.png"><img alt="../_images/ac6e948d1939325eeac5764df67a997378e0845718331c22a53f17373f73e479.png" src="../_images/ac6e948d1939325eeac5764df67a997378e0845718331c22a53f17373f73e479.png" style="width: 1249px; height: 303px;" />
+<a class="reference internal image-reference" href="../_images/7e5d48d87f1c3e588fa4830f2032bc23d4a937d385ee8158501861a7d0de8f33.png"><img alt="../_images/7e5d48d87f1c3e588fa4830f2032bc23d4a937d385ee8158501861a7d0de8f33.png" src="../_images/7e5d48d87f1c3e588fa4830f2032bc23d4a937d385ee8158501861a7d0de8f33.png" style="width: 1077px; height: 291px;" />
 </a>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -2169,7 +2383,7 @@ Name: count, dtype: int64
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Intro slide</p>
+        <p class="prev-next-title"><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b></p>
       </div>
     </a>
     <a class="right-next"
@@ -2177,7 +2391,7 @@ Name: count, dtype: int64
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><b> Neutrophil Lymphangioleiomyomatosis (LAM) Analysis - for Sasha-Gaye Richards, PhD from the Johnson Lab <b></p>
+        <p class="prev-next-title"><b> Reference Neutrophil Query <b></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2203,25 +2417,75 @@ Name: count, dtype: int64
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#unifold-manifold-and-approximation-umap-also-known-as-tsne-plots">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#umap-showing-expression-of-some-neutrophil-markers-within-the-population">UMAP showing expression of some Neutrophil markers within the population.</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#dotplot-showing-expression-of-general-neutrophil-n1-and-n2-specific-neutrophil-markers">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cells-were-subset-using-mpo-as-a-positive-marker">Cells were subset using MPO as a positive marker.</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam2">LAM2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam3">LAM3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam2">LAM2</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam3">LAM3</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lam4">LAM4</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#removed-from-analysis-as-it-didn-t-have-any-mpo-cells">Removed from analysis as it didn’t have any MPO+ Cells.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Cells were subset using MPO as a positive marker.</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse135851">Joining Datasets for GSE135851</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse135851">Joining Datasets for GSE135851</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gse190260">GSE190260</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">LAM1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">LAM2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">LAM3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">LAM1</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Cells were subset using MPO as a positive marker.</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse190260">Joining DataSets for GSE190260</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-gse190260-lam-with-gse135851-lam">Joining GSE190260_LAM with GSE135851_LAM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">LAM2</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">LAM3</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Cells were subset using MPO as a positive marker.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-datasets-for-gse190260">Joining DataSets for GSE190260</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-gse190260-lam-with-gse135851-lam">Joining GSE190260_LAM with GSE135851_LAM</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Unifold Manifold and Approximation (<strong>UMAP</strong>), also known as <strong>TSNE</strong>, plots.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">UMAP showing expression of some Neutrophil markers within the population.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Dotplot showing expression of general neutrophil, N1 and N2 specific neutrophil markers.</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

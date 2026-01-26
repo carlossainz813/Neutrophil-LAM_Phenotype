@@ -37,22 +37,20 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 #| remove-cell
-/gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Intro.ipynb
+/gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Intro.ipynb
 
-cd /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Initial_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Reference_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil LAM Phenotype - Johnson Lab/HTML/content
+cd /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Initial_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Reference_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/MPO_Neutrophils.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
 jupyter-book build . --builder html
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
-[31m    [39m[31mgpfs01/home/mzxcs8/Extra/Neutrophil(LAM, Phenotype, -, Johnson, Lab/Analysis_LAM/Intro.ipynb)[39m
-                                                         ^
+  [36mCell[39m[36m [39m[32mIn[2][39m[32m, line 9[39m
+[31m    [39m[31mjupyter-book build . --builder html[39m
+                 ^
 [31mSyntaxError[39m[31m:[39m invalid syntax
 
 
