@@ -39,11 +39,11 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 #| remove-cell
 /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Intro.ipynb
 
-cd /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Initial_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Reference_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
-cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/MPO_Neutrophils.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/content
+cd /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/mybook_LAM_JohnsonLab2
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Intro.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/mybook_LAM_JohnsonLab2/content
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Initial_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/mybook_LAM_JohnsonLab2/content
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/Reference_Neutrophil_Query.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/mybook_LAM_JohnsonLab2/content
+cp /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/Analysis_LAM/MPO_Neutrophils.ipynb /gpfs01/home/mzxcs8/Extra/Neutrophil_LAM_Phenotype_JohnsonLab/HTML/mybook_LAM_JohnsonLab2/content
 jupyter-book build . --builder html
 ------------------
 
